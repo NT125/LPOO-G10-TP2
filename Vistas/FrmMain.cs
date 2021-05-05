@@ -24,6 +24,12 @@ namespace Vistas
 
         }
 
+        private void agregarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormUsuario oFrmUsuario = new FormUsuario();
+            oFrmUsuario.Show();
+        }
+
         private void añadirEdificioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmAgregarEdificio oFrmAgregarEdificio = new FrmAgregarEdificio();

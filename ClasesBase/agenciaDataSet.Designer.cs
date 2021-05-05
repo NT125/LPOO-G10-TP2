@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace Vistas {
+namespace ClasesBase {
     
     
     /// <summary>
@@ -3459,7 +3459,7 @@ namespace Vistas {
         }
     }
 }
-namespace Vistas.agenciaDataSetTableAdapters {
+namespace ClasesBase.agenciaDataSetTableAdapters {
     
     
     /// <summary>
@@ -3611,7 +3611,7 @@ namespace Vistas.agenciaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Vistas.Properties.Settings.Default.agenciaConnectionString;
+            this._connection.ConnectionString = global::ClasesBase.Properties.Settings.Default.agenciaConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3868,7 +3868,7 @@ namespace Vistas.agenciaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Vistas.Properties.Settings.Default.agenciaConnectionString;
+            this._connection.ConnectionString = global::ClasesBase.Properties.Settings.Default.agenciaConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4115,7 +4115,7 @@ namespace Vistas.agenciaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Vistas.Properties.Settings.Default.agenciaConnectionString;
+            this._connection.ConnectionString = global::ClasesBase.Properties.Settings.Default.agenciaConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4369,7 +4369,7 @@ namespace Vistas.agenciaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Vistas.Properties.Settings.Default.agenciaConnectionString;
+            this._connection.ConnectionString = global::ClasesBase.Properties.Settings.Default.agenciaConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4611,7 +4611,7 @@ namespace Vistas.agenciaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Vistas.Properties.Settings.Default.agenciaConnectionString;
+            this._connection.ConnectionString = global::ClasesBase.Properties.Settings.Default.agenciaConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4841,7 +4841,7 @@ namespace Vistas.agenciaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Vistas.Properties.Settings.Default.agenciaConnectionString;
+            this._connection.ConnectionString = global::ClasesBase.Properties.Settings.Default.agenciaConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5079,7 +5079,7 @@ namespace Vistas.agenciaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Vistas.Properties.Settings.Default.agenciaConnectionString;
+            this._connection.ConnectionString = global::ClasesBase.Properties.Settings.Default.agenciaConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
