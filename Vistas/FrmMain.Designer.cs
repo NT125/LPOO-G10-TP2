@@ -32,7 +32,11 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.sistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.actualizarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.salirDelSistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.edificiosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.añadirEdificioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inquilinosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,8 +45,6 @@
             this.agregarDepartamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alquilerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.salirDelSistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,6 +71,8 @@
             // 
             this.sistemaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agregarUsuarioToolStripMenuItem,
+            this.actualizarUsuarioToolStripMenuItem,
+            this.buscarUsuarioToolStripMenuItem,
             this.eliminarUsuarioToolStripMenuItem,
             this.toolStripMenuItem1,
             this.salirDelSistemaToolStripMenuItem});
@@ -79,14 +83,37 @@
             // agregarUsuarioToolStripMenuItem
             // 
             this.agregarUsuarioToolStripMenuItem.Name = "agregarUsuarioToolStripMenuItem";
-            this.agregarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.agregarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.agregarUsuarioToolStripMenuItem.Text = "Agregar Usuario";
+            // 
+            // actualizarUsuarioToolStripMenuItem
+            // 
+            this.actualizarUsuarioToolStripMenuItem.Name = "actualizarUsuarioToolStripMenuItem";
+            this.actualizarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.actualizarUsuarioToolStripMenuItem.Text = "Actualizar Usuario";
+            // 
+            // buscarUsuarioToolStripMenuItem
+            // 
+            this.buscarUsuarioToolStripMenuItem.Name = "buscarUsuarioToolStripMenuItem";
+            this.buscarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.buscarUsuarioToolStripMenuItem.Text = "Buscar Usuario";
             // 
             // eliminarUsuarioToolStripMenuItem
             // 
             this.eliminarUsuarioToolStripMenuItem.Name = "eliminarUsuarioToolStripMenuItem";
-            this.eliminarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.eliminarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.eliminarUsuarioToolStripMenuItem.Text = "Eliminar Usuario";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(166, 6);
+            // 
+            // salirDelSistemaToolStripMenuItem
+            // 
+            this.salirDelSistemaToolStripMenuItem.Name = "salirDelSistemaToolStripMenuItem";
+            this.salirDelSistemaToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.salirDelSistemaToolStripMenuItem.Text = "Salir del Sistema";
             // 
             // edificiosToolStripMenuItem
             // 
@@ -154,28 +181,18 @@
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(157, 6);
-            // 
-            // salirDelSistemaToolStripMenuItem
-            // 
-            this.salirDelSistemaToolStripMenuItem.Name = "salirDelSistemaToolStripMenuItem";
-            this.salirDelSistemaToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.salirDelSistemaToolStripMenuItem.Text = "Salir del Sistema";
-            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(502, 86);
+            this.ClientSize = new System.Drawing.Size(502, 95);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmMain";
             this.Text = "Sistema Principal";
+            this.Load += new System.EventHandler(this.FrmMain_Load_1);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -189,7 +206,6 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.ToolStripMenuItem sistemaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agregarUsuarioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eliminarUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem edificiosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem añadirEdificioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inquilinosToolStripMenuItem;
@@ -198,6 +214,9 @@
         private System.Windows.Forms.ToolStripMenuItem agregarDepartamentoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem alquilerToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem actualizarUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem buscarUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eliminarUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem salirDelSistemaToolStripMenuItem;
     }

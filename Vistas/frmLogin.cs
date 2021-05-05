@@ -40,7 +40,7 @@ namespace Vistas
 
             if (bUserFound)
             {
-                MessageBox.Show("Bienvenido/a: " + txtUserName.Text);
+                MessageBox.Show("Bienvenido/a: " + txtUserName.Text,"Datos correctos",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
                 
                 oFrmMain.perfil = "administrador";
                 oFrmMain.Show();               
@@ -48,7 +48,7 @@ namespace Vistas
 
             else
             {
-                MessageBox.Show("Datos de acceso incorrectos");
+                MessageBox.Show("El usuario ingresado no existe", "Datos incorrectos",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
 
 
@@ -86,6 +86,11 @@ namespace Vistas
         {
             btnCancelar.Width = 75;
             btnCancelar.Height = 23;
+        }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

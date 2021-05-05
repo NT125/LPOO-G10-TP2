@@ -24,7 +24,7 @@ namespace Vistas
         private void btnAceptar_Click(object sender, EventArgs e)
         {
 
-            var confirmResult = MessageBox.Show("¿Agregar Datos?", "Confirmar", MessageBoxButtons.YesNo);
+            var confirmResult = MessageBox.Show("¿Agregar Datos?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             
             if (confirmResult == DialogResult.Yes)
             {
@@ -34,10 +34,10 @@ namespace Vistas
                 oEdificio.EdifAdministrador = txtAdministradorEdificio.Text;
                 oEdificio.EdifTelefono = txtTelefonoEdificio.Text;
                 codE++;
-                MessageBox.Show("¡Datos Agregados!\n\nNombre: "+ oEdificio.EdifNombre +
+                MessageBox.Show("¡Datos Agregados!\nNombre: "+ oEdificio.EdifNombre +
                     "\nDirección: " + oEdificio.EdifDireccion +
                     "\nAdministrador: " + oEdificio.EdifAdministrador +
-                    "\nN° Teléfono: " + oEdificio.EdifTelefono);
+                    "\nN° Teléfono: " + oEdificio.EdifTelefono, "Datos agregados con éxito", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 codE++;
                 this.Controls.Clear();
                 this.InitializeComponent();

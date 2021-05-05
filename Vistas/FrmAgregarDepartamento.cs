@@ -23,7 +23,7 @@ namespace Vistas
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            var confirmResult = MessageBox.Show("¿Agregar Datos?", "Confirmar", MessageBoxButtons.YesNo);
+            var confirmResult = MessageBox.Show("¿Agregar Datos?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             
             if (confirmResult == DialogResult.Yes)
             {
@@ -37,13 +37,13 @@ namespace Vistas
                 oDpto.DptoDisposicion = txtDispo.Text;
                 oDpto.DptoPrecio = float.Parse(txtPrecio.Text);
                 codD++;
-                MessageBox.Show("¡Datos Agregados!\n\nPiso: " + oDpto.DptoPiso +
+                MessageBox.Show("¡Datos Agregados!\nPiso: " + oDpto.DptoPiso +
                     "\nNúmero: " + oDpto.DptoNumero +
                     "\nAmbientes: " + oDpto.DptoAmbientes +
                     "\nDormitorios: " + oDpto.DptoDormitorios +
                     "\nBaños: " + oDpto.DptoBanios +
                     "\nDisposición: " + oDpto.DptoDisposicion +
-                    "\nPrecio: " + oDpto.DptoPrecio);
+                    "\nPrecio: " + oDpto.DptoPrecio, "Datos agregados con éxito", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 this.Controls.Clear();
                 this.InitializeComponent();
             }

@@ -51,12 +51,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>agenciaDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="FrmUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmUsuario.Designer.cs">
-      <DependentUpon>FrmUsuario.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmAgregarDepartamento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,9 +97,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmUsuario.resx">
-      <DependentUpon>FrmUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
