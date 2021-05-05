@@ -25,19 +25,13 @@ namespace ClasesBase
             return dTable;
         }
 
-        public static DataTable list_usuarios()
+        public static DataTable listarUsuarios()
         {
 
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.agenciaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT ";
-            cmd.CommandText += " Rol_Descripcion as 'Rol', ";
-            cmd.CommandText += " Usu_ApellidoNombre as 'Nombre y Apellido', ";
-            cmd.CommandText += " Usu_NombreUsuario as 'Usuario', Usu_Contraseña as 'Contraseña', ";
-            cmd.CommandText += " Usu_ID, U.Rol_Codigo ";
-            cmd.CommandText += " FROM Usuario as U";
-            cmd.CommandText += " LEFT JOIN Rol as R ON (R.Rol_Codigo=U.Rol_Codigo)";
+            cmd.CommandText = "SELECT * FROM USuario";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
 

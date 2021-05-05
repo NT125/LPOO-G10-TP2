@@ -38,5 +38,10 @@ namespace Vistas
         {
 
         }
+
+        private void btnModifyUsr_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
