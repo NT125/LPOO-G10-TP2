@@ -9,3 +9,9 @@ C:\Users\admin\Downloads\LPOO1_G10-master (1)\LPOO1_G10-master\ClasesBase\obj\De
 C:\Users\admin\Downloads\LPOO1_G10-master (1)\LPOO1_G10-master\ClasesBase\obj\Debug\ClasesBase.dll
 C:\Users\admin\Downloads\LPOO1_G10-master (1)\LPOO1_G10-master\ClasesBase\obj\Debug\ClasesBase.pdb
 C:\Users\admin\Downloads\LPOO1_G10-master (1)\LPOO1_G10-master\ClasesBase\bin\Debug\ClasesBase.dll.config
+Z:\ides\ProyectoPuntonetgitOfficial\LPOO-G10-TP2\ClasesBase\bin\Debug\ClasesBase.dll.config
+Z:\ides\ProyectoPuntonetgitOfficial\LPOO-G10-TP2\ClasesBase\bin\Debug\ClasesBase.dll
+Z:\ides\ProyectoPuntonetgitOfficial\LPOO-G10-TP2\ClasesBase\bin\Debug\ClasesBase.pdb
+Z:\ides\ProyectoPuntonetgitOfficial\LPOO-G10-TP2\ClasesBase\obj\Debug\ResolveAssemblyReference.cache
+Z:\ides\ProyectoPuntonetgitOfficial\LPOO-G10-TP2\ClasesBase\obj\Debug\ClasesBase.dll
+Z:\ides\ProyectoPuntonetgitOfficial\LPOO-G10-TP2\ClasesBase\obj\Debug\ClasesBase.pdb

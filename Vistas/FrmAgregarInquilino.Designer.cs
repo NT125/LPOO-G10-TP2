@@ -132,6 +132,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmAgregarInquilino";
             this.Text = "Agregar Inquilino";
+            this.Load += new System.EventHandler(this.FrmAgregarInquilino_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
