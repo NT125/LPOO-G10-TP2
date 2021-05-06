@@ -43,52 +43,77 @@ namespace Vistas
         }
         ///////////////////////
 
-        // OPERACIONES DEL ABM/CONSULTAS
+        // OPERACIONES DEL ABM/CONSULTAS//
         private void btnModifyUsr_Click(object sender, EventArgs e)
         {               
             dgvUsers.DataSource = TrabajarUsuario.actualizarUsuario(txtUsuario.Text, txtPasswd.Text, txtApeNom.Text, txtNombreBuscado.Text);
             MessageBox.Show("Los datos han sido actualizados con éxito", "Usuario Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-            this.Controls.Clear();
-            this.InitializeComponent();
+
+            //Reiniciando los campos
+            txtApeNom.Text = "";
+            txtUsuario.Text = "";
+            txtPasswd.Text = "";
 
             cargarUsuarios();
         }
 
         private void btnAddUsr_Click(object sender, EventArgs e)
         {
-            var confirmResult = MessageBox.Show("¿Desea añadir al usuario " + txtUsuario.Text + "?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (confirmResult == DialogResult.Yes)
+            if (txtApeNom.Text != "" || txtPasswd.Text != "" || txtUsuario.Text != "")
             {
-                Usuario oUser = new Usuario();
 
-                oUser.RolCodigo = (int)cmbRoles.SelectedValue;
-                oUser.UsuApellidoNombre = txtApeNom.Text;
-                oUser.UsuNombreUsuario = txtUsuario.Text;
-                oUser.UsuContrasenia = txtPasswd.Text;
+                var confirmResult = MessageBox.Show("¿Desea añadir al usuario " + txtUsuario.Text + "?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (confirmResult == DialogResult.Yes)
+                {
+                    Usuario oUser = new Usuario();
 
-                TrabajarUsuario.insertarUsuario(oUser);
-                MessageBox.Show("El usuario " + txtUsuario.Text + " ha sido agregado con éxito", "Usuario Agregado", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                this.Controls.Clear();
-                this.InitializeComponent();
+                    oUser.RolCodigo = (int)cmbRoles.SelectedValue;
+                    oUser.UsuApellidoNombre = txtApeNom.Text;
+                    oUser.UsuNombreUsuario = txtUsuario.Text;
+                    oUser.UsuContrasenia = txtPasswd.Text;
+
+                    TrabajarUsuario.insertarUsuario(oUser);
+                    MessageBox.Show("El usuario " + txtUsuario.Text + " ha sido agregado con éxito", "Usuario Agregado", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    
+                    //Reiniciando los campos
+                    txtApeNom.Text = "";
+                    txtUsuario.Text = "";
+                    txtPasswd.Text = "";
+                }
+
+                cargarUsuarios();
             }
-
-            cargarUsuarios();
+            else
+            {
+                MessageBox.Show("Por favor, complete todos los campos", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnDeleteUsr_Click(object sender, EventArgs e)
         {
-            dgvUsers.DataSource = TrabajarUsuario.borrarUsuario(txtUsuario.Text);
-            var confirmResult = MessageBox.Show("¿Realmente desea eliminar este Usuario?\nEsta acción no se puede deshacer", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-            if (confirmResult == DialogResult.Yes)
+            if (txtUsuario.Text != "")
             {
+                var confirmResult = MessageBox.Show("¿Realmente desea eliminar este Usuario?\nEsta acción no se puede deshacer", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-                dgvUsers.DataSource = TrabajarUsuario.borrarUsuario(txtUsuario.Text);
-                MessageBox.Show("El usuario "+txtUsuario.Text+" ha sido eliminado","Usuario Eliminado",MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                this.Controls.Clear();
-                this.InitializeComponent();
+                if (confirmResult == DialogResult.Yes)
+                {
+
+                    dgvUsers.DataSource = TrabajarUsuario.borrarUsuario(txtUsuario.Text);
+                    MessageBox.Show("El usuario " + txtUsuario.Text + " ha sido eliminado", "Usuario Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+                    
+                    //Reiniciando los campos
+                    txtApeNom.Text = "";
+                    txtUsuario.Text = "";
+                    txtPasswd.Text = "";
+                }
+                cargarUsuarios();
             }
-            cargarUsuarios();
+            else
+            {
+                MessageBox.Show("Por favor, ingrese un nombre de Usuario", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void btnSearchUsr_Click(object sender, EventArgs e)

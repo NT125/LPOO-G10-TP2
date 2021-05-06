@@ -70,5 +70,16 @@ namespace Vistas
         {
 
         }
+
+        private void salirDelSistemaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var confirmResult = MessageBox.Show("¿Desea salir del Sistema?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (confirmResult == DialogResult.Yes)
+            {
+                this.Close();
+            }
+
+        }
     }
 }
