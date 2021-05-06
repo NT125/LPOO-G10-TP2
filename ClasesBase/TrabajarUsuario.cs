@@ -32,11 +32,11 @@ namespace ClasesBase
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "SELECT ";
-            cmd.CommandText += " Rol_Descripcion as 'Rol', ";
+            cmd.CommandText += " Usu_ID as 'ID', ";
             cmd.CommandText += " Usu_ApellidoNombre as 'Nombre y Apellido', ";
             cmd.CommandText += " Usu_NombreUsuario as 'Usuario', ";
             cmd.CommandText += " Usu_Contraseña as 'Contraseña', ";
-            cmd.CommandText += " Usu_ID, U.Rol_Codigo ";
+            cmd.CommandText += " Rol_Descripcion as 'Rol', U.Rol_Codigo ";
             cmd.CommandText += " FROM Usuario as U";
             cmd.CommandText += " LEFT JOIN Rol as R ON (R.Rol_Codigo=U.Rol_Codigo)";
             cmd.CommandType = CommandType.Text;
@@ -71,6 +71,80 @@ namespace ClasesBase
             cnn.Close();
         }
 
+        public static DataTable buscarUsuario(string cadena)
+        {
+
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.agenciaConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT ";
+            cmd.CommandText += " Usu_ID as 'ID', ";
+            cmd.CommandText += " Usu_ApellidoNombre as 'Nombre y Apellido', ";
+            cmd.CommandText += " Usu_NombreUsuario as 'Usuario', ";
+            cmd.CommandText += " Usu_Contraseña as 'Contraseña', ";
+            cmd.CommandText += " Rol_Descripcion as 'Rol', U.Rol_Codigo ";
+            cmd.CommandText += " FROM Usuario as U";
+            cmd.CommandText += " LEFT JOIN Rol as R ON (R.Rol_Codigo=U.Rol_Codigo)";
+            cmd.CommandText += " WHERE";
+            cmd.CommandText += " Usu_NombreUsuario LIKE @pattern ";
+
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@pattern", "%" + cadena + "%");
+
+            // Ejecuta la consulta
+            SqlDataAdapter dAdapter = new SqlDataAdapter(cmd);
+
+            // Llena los datos de la consulta en el DataTable
+            DataTable dTable = new DataTable();
+            dAdapter.Fill(dTable);
+
+            return dTable;
+        }
+
+        public static DataTable actualizarUsuario(string usuario, string contraseña, string nombreapellido, string cadena)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.agenciaConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "UPDATE Usuario SET Usu_ApellidoNombre = '"+nombreapellido+"', ";
+            cmd.CommandText += "Usu_NombreUsuario = '" + usuario + "', ";
+            cmd.CommandText += "Usu_Contraseña = '" + contraseña + "', WHERE Usu_ApellidoNombre LIKE @pattern";
+            
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@pattern", "%" + cadena + "%");
+            
+            DataTable dTable = new DataTable();
+            return dTable;
+        }
+
+        public static DataTable borrarUsuario(string cadena)
+        {
+
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.agenciaConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "DELETE FROM Usuario ";
+            cmd.CommandText += " WHERE";
+            cmd.CommandText += " Usu_NombreUsuario LIKE @pattern ";
+
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@pattern", "%" + cadena + "%");
+
+            // Ejecuta la consulta
+            SqlDataAdapter dAdapter = new SqlDataAdapter(cmd);
+
+            // Llena los datos de la consulta en el DataTable
+            DataTable dTable = new DataTable();
+            dAdapter.Fill(dTable);
+
+            return dTable;
+        }
 
     }
 }

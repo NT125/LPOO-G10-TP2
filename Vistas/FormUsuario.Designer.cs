@@ -45,6 +45,8 @@
             this.txtApeNom = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtPasswd = new System.Windows.Forms.TextBox();
+            this.lblUpdate = new System.Windows.Forms.Label();
+            this.txtNombreBuscado = new System.Windows.Forms.TextBox();
             this.groupABM.SuspendLayout();
             this.groupQuery.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
@@ -52,6 +54,8 @@
             // 
             // groupABM
             // 
+            this.groupABM.Controls.Add(this.txtNombreBuscado);
+            this.groupABM.Controls.Add(this.lblUpdate);
             this.groupABM.Controls.Add(this.txtPasswd);
             this.groupABM.Controls.Add(this.txtUsuario);
             this.groupABM.Controls.Add(this.txtApeNom);
@@ -65,7 +69,7 @@
             this.groupABM.Controls.Add(this.btnAddUsr);
             this.groupABM.Location = new System.Drawing.Point(12, 12);
             this.groupABM.Name = "groupABM";
-            this.groupABM.Size = new System.Drawing.Size(280, 176);
+            this.groupABM.Size = new System.Drawing.Size(280, 214);
             this.groupABM.TabIndex = 0;
             this.groupABM.TabStop = false;
             this.groupABM.Text = "ABM";
@@ -73,7 +77,7 @@
             // btnDeleteUsr
             // 
             this.btnDeleteUsr.ForeColor = System.Drawing.Color.Firebrick;
-            this.btnDeleteUsr.Location = new System.Drawing.Point(181, 140);
+            this.btnDeleteUsr.Location = new System.Drawing.Point(183, 174);
             this.btnDeleteUsr.Name = "btnDeleteUsr";
             this.btnDeleteUsr.Size = new System.Drawing.Size(72, 23);
             this.btnDeleteUsr.TabIndex = 2;
@@ -83,7 +87,7 @@
             // 
             // btnModifyUsr
             // 
-            this.btnModifyUsr.Location = new System.Drawing.Point(103, 140);
+            this.btnModifyUsr.Location = new System.Drawing.Point(105, 174);
             this.btnModifyUsr.Name = "btnModifyUsr";
             this.btnModifyUsr.Size = new System.Drawing.Size(72, 23);
             this.btnModifyUsr.TabIndex = 1;
@@ -93,7 +97,7 @@
             // 
             // btnAddUsr
             // 
-            this.btnAddUsr.Location = new System.Drawing.Point(25, 140);
+            this.btnAddUsr.Location = new System.Drawing.Point(27, 174);
             this.btnAddUsr.Name = "btnAddUsr";
             this.btnAddUsr.Size = new System.Drawing.Size(72, 23);
             this.btnAddUsr.TabIndex = 0;
@@ -106,7 +110,7 @@
             this.groupQuery.Controls.Add(this.txtSearch);
             this.groupQuery.Controls.Add(this.btnShowUsr);
             this.groupQuery.Controls.Add(this.btnSearchUsr);
-            this.groupQuery.Location = new System.Drawing.Point(19, 194);
+            this.groupQuery.Location = new System.Drawing.Point(19, 232);
             this.groupQuery.Name = "groupQuery";
             this.groupQuery.Size = new System.Drawing.Size(273, 111);
             this.groupQuery.TabIndex = 1;
@@ -128,15 +132,18 @@
             this.btnShowUsr.TabIndex = 1;
             this.btnShowUsr.Text = "Listar todos los Usuarios";
             this.btnShowUsr.UseVisualStyleBackColor = true;
+            this.btnShowUsr.Click += new System.EventHandler(this.btnShowUsr_Click);
             // 
             // btnSearchUsr
             // 
+            this.btnSearchUsr.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnSearchUsr.Location = new System.Drawing.Point(7, 53);
             this.btnSearchUsr.Name = "btnSearchUsr";
             this.btnSearchUsr.Size = new System.Drawing.Size(260, 23);
             this.btnSearchUsr.TabIndex = 0;
             this.btnSearchUsr.Text = "Buscar Usuario";
             this.btnSearchUsr.UseVisualStyleBackColor = true;
+            this.btnSearchUsr.Click += new System.EventHandler(this.btnSearchUsr_Click);
             // 
             // dgvUsers
             // 
@@ -213,11 +220,27 @@
             this.txtPasswd.Size = new System.Drawing.Size(133, 20);
             this.txtPasswd.TabIndex = 10;
             // 
+            // lblUpdate
+            // 
+            this.lblUpdate.AutoSize = true;
+            this.lblUpdate.Location = new System.Drawing.Point(24, 129);
+            this.lblUpdate.Name = "lblUpdate";
+            this.lblUpdate.Size = new System.Drawing.Size(179, 13);
+            this.lblUpdate.TabIndex = 11;
+            this.lblUpdate.Text = "Nombre a Actualizar (Sólo UPDATE)";
+            // 
+            // txtNombreBuscado
+            // 
+            this.txtNombreBuscado.Location = new System.Drawing.Point(27, 145);
+            this.txtNombreBuscado.Name = "txtNombreBuscado";
+            this.txtNombreBuscado.Size = new System.Drawing.Size(228, 20);
+            this.txtNombreBuscado.TabIndex = 12;
+            // 
             // FormUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(878, 316);
+            this.ClientSize = new System.Drawing.Size(878, 355);
             this.Controls.Add(this.dgvUsers);
             this.Controls.Add(this.groupQuery);
             this.Controls.Add(this.groupABM);
@@ -252,5 +275,7 @@
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Label lblApNom;
         private System.Windows.Forms.Label lblRol;
+        private System.Windows.Forms.TextBox txtNombreBuscado;
+        private System.Windows.Forms.Label lblUpdate;
     }
 }
