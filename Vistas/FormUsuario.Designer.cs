@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.groupABM = new System.Windows.Forms.GroupBox();
             this.btnDeleteUsr = new System.Windows.Forms.Button();
             this.btnModifyUsr = new System.Windows.Forms.Button();
@@ -38,29 +37,25 @@
             this.btnShowUsr = new System.Windows.Forms.Button();
             this.btnSearchUsr = new System.Windows.Forms.Button();
             this.dgvUsers = new System.Windows.Forms.DataGridView();
-            this.agenciaDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.agenciaDataSet1 = new Vistas.agenciaDataSet();
             this.lblRol = new System.Windows.Forms.Label();
             this.lblApNom = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblPasswd = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.cmbRoles = new System.Windows.Forms.ComboBox();
+            this.txtApeNom = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtPasswd = new System.Windows.Forms.TextBox();
             this.groupABM.SuspendLayout();
             this.groupQuery.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agenciaDataSet1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agenciaDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupABM
             // 
-            this.groupABM.Controls.Add(this.textBox3);
-            this.groupABM.Controls.Add(this.textBox2);
-            this.groupABM.Controls.Add(this.textBox1);
-            this.groupABM.Controls.Add(this.comboBox1);
+            this.groupABM.Controls.Add(this.txtPasswd);
+            this.groupABM.Controls.Add(this.txtUsuario);
+            this.groupABM.Controls.Add(this.txtApeNom);
+            this.groupABM.Controls.Add(this.cmbRoles);
             this.groupABM.Controls.Add(this.lblPasswd);
             this.groupABM.Controls.Add(this.lblUsuario);
             this.groupABM.Controls.Add(this.lblApNom);
@@ -84,6 +79,7 @@
             this.btnDeleteUsr.TabIndex = 2;
             this.btnDeleteUsr.Text = "Eliminar";
             this.btnDeleteUsr.UseVisualStyleBackColor = true;
+            this.btnDeleteUsr.Click += new System.EventHandler(this.btnDeleteUsr_Click);
             // 
             // btnModifyUsr
             // 
@@ -103,6 +99,7 @@
             this.btnAddUsr.TabIndex = 0;
             this.btnAddUsr.Text = "Agregar";
             this.btnAddUsr.UseVisualStyleBackColor = true;
+            this.btnAddUsr.Click += new System.EventHandler(this.btnAddUsr_Click);
             // 
             // groupQuery
             // 
@@ -144,29 +141,17 @@
             // dgvUsers
             // 
             this.dgvUsers.AllowUserToOrderColumns = true;
-            this.dgvUsers.AutoGenerateColumns = false;
             this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsers.DataSource = this.agenciaDataSet1BindingSource;
             this.dgvUsers.Location = new System.Drawing.Point(329, 17);
             this.dgvUsers.Name = "dgvUsers";
-            this.dgvUsers.Size = new System.Drawing.Size(514, 282);
+            this.dgvUsers.Size = new System.Drawing.Size(532, 282);
             this.dgvUsers.TabIndex = 2;
             this.dgvUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // agenciaDataSet1BindingSource
-            // 
-            this.agenciaDataSet1BindingSource.DataSource = this.agenciaDataSet1;
-            this.agenciaDataSet1BindingSource.Position = 0;
-            // 
-            // agenciaDataSet1
-            // 
-            this.agenciaDataSet1.DataSetName = "agenciaDataSet";
-            this.agenciaDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lblRol
             // 
             this.lblRol.AutoSize = true;
-            this.lblRol.Location = new System.Drawing.Point(21, 24);
+            this.lblRol.Location = new System.Drawing.Point(22, 24);
             this.lblRol.Name = "lblRol";
             this.lblRol.Size = new System.Drawing.Size(23, 13);
             this.lblRol.TabIndex = 3;
@@ -175,7 +160,7 @@
             // lblApNom
             // 
             this.lblApNom.AutoSize = true;
-            this.lblApNom.Location = new System.Drawing.Point(21, 51);
+            this.lblApNom.Location = new System.Drawing.Point(22, 51);
             this.lblApNom.Name = "lblApNom";
             this.lblApNom.Size = new System.Drawing.Size(92, 13);
             this.lblApNom.TabIndex = 4;
@@ -184,7 +169,7 @@
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(21, 77);
+            this.lblUsuario.Location = new System.Drawing.Point(22, 77);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(43, 13);
             this.lblUsuario.TabIndex = 5;
@@ -193,46 +178,46 @@
             // lblPasswd
             // 
             this.lblPasswd.AutoSize = true;
-            this.lblPasswd.Location = new System.Drawing.Point(21, 103);
+            this.lblPasswd.Location = new System.Drawing.Point(22, 103);
             this.lblPasswd.Name = "lblPasswd";
             this.lblPasswd.Size = new System.Drawing.Size(61, 13);
             this.lblPasswd.TabIndex = 6;
             this.lblPasswd.Text = "Contraseña";
             // 
-            // comboBox1
+            // cmbRoles
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(119, 21);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(133, 21);
-            this.comboBox1.TabIndex = 7;
+            this.cmbRoles.FormattingEnabled = true;
+            this.cmbRoles.Location = new System.Drawing.Point(119, 21);
+            this.cmbRoles.Name = "cmbRoles";
+            this.cmbRoles.Size = new System.Drawing.Size(133, 21);
+            this.cmbRoles.TabIndex = 7;
             // 
-            // textBox1
+            // txtApeNom
             // 
-            this.textBox1.Location = new System.Drawing.Point(119, 48);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(133, 20);
-            this.textBox1.TabIndex = 8;
+            this.txtApeNom.Location = new System.Drawing.Point(119, 48);
+            this.txtApeNom.Name = "txtApeNom";
+            this.txtApeNom.Size = new System.Drawing.Size(133, 20);
+            this.txtApeNom.TabIndex = 8;
             // 
-            // textBox2
+            // txtUsuario
             // 
-            this.textBox2.Location = new System.Drawing.Point(119, 74);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(133, 20);
-            this.textBox2.TabIndex = 9;
+            this.txtUsuario.Location = new System.Drawing.Point(119, 74);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(133, 20);
+            this.txtUsuario.TabIndex = 9;
             // 
-            // textBox3
+            // txtPasswd
             // 
-            this.textBox3.Location = new System.Drawing.Point(119, 100);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(133, 20);
-            this.textBox3.TabIndex = 10;
+            this.txtPasswd.Location = new System.Drawing.Point(119, 100);
+            this.txtPasswd.Name = "txtPasswd";
+            this.txtPasswd.Size = new System.Drawing.Size(133, 20);
+            this.txtPasswd.TabIndex = 10;
             // 
             // FormUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(862, 316);
+            this.ClientSize = new System.Drawing.Size(878, 316);
             this.Controls.Add(this.dgvUsers);
             this.Controls.Add(this.groupQuery);
             this.Controls.Add(this.groupABM);
@@ -244,8 +229,6 @@
             this.groupQuery.ResumeLayout(false);
             this.groupQuery.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agenciaDataSet1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agenciaDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -261,12 +244,10 @@
         private System.Windows.Forms.Button btnSearchUsr;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.DataGridView dgvUsers;
-        private System.Windows.Forms.BindingSource agenciaDataSet1BindingSource;
-        private agenciaDataSet agenciaDataSet1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txtPasswd;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.TextBox txtApeNom;
+        private System.Windows.Forms.ComboBox cmbRoles;
         private System.Windows.Forms.Label lblPasswd;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Label lblApNom;

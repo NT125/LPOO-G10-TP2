@@ -9,7 +9,7 @@ namespace ClasesBase
 {
     public class TrabajarUsuario
     {
-        public static DataTable listadoRoles()
+        public static DataTable listarRoles()
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.agenciaConnectionString);
 
@@ -31,21 +31,28 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.agenciaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT * FROM USuario";
+            cmd.CommandText = "SELECT ";
+            cmd.CommandText += " Rol_Descripcion as 'Rol', ";
+            cmd.CommandText += " Usu_ApellidoNombre as 'Nombre y Apellido', ";
+            cmd.CommandText += " Usu_NombreUsuario as 'Usuario', ";
+            cmd.CommandText += " Usu_Contraseña as 'Contraseña', ";
+            cmd.CommandText += " Usu_ID, U.Rol_Codigo ";
+            cmd.CommandText += " FROM Usuario as U";
+            cmd.CommandText += " LEFT JOIN Rol as R ON (R.Rol_Codigo=U.Rol_Codigo)";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
 
             // Ejecuta la consulta
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            SqlDataAdapter dAdapter = new SqlDataAdapter(cmd);
 
             // Llena los datos de la consulta en el DataTable
-            DataTable dt = new DataTable();
-            da.Fill(dt);
+            DataTable dTable = new DataTable();
+            dAdapter.Fill(dTable);
 
-            return dt;
+            return dTable;
         }
 
-        public static void insert_usuario(Usuario usr)
+        public static void insertarUsuario(Usuario usr)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.agenciaConnectionString);
 
@@ -63,5 +70,7 @@ namespace ClasesBase
             cmd.ExecuteNonQuery();
             cnn.Close();
         }
+
+
     }
 }
