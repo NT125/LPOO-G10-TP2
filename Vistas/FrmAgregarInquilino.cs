@@ -46,11 +46,6 @@ namespace Vistas
             this.Close();
         }
 
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
         
     }
 }

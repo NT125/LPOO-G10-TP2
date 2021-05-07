@@ -40,11 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="agenciaDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>agenciaDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Alquiler.cs" />
     <Compile Include="Edificio.cs" />
     <Compile Include="Departamento.cs" />
@@ -60,17 +55,6 @@
     <Compile Include="Usuario.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="agenciaDataSet.xsc">
-      <DependentUpon>agenciaDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="agenciaDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>agenciaDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="agenciaDataSet.xss">
-      <DependentUpon>agenciaDataSet.xsd</DependentUpon>
-    </None>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
