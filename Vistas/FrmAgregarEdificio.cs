@@ -48,10 +48,5 @@ namespace Vistas
         {
             this.Close();
         }
-
-        private void FrmAgregarEdificio_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

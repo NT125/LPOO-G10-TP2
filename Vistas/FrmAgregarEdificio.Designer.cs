@@ -152,7 +152,6 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmAgregarEdificio";
             this.Text = "Agregar Edificio";
-            this.Load += new System.EventHandler(this.FrmAgregarEdificio_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

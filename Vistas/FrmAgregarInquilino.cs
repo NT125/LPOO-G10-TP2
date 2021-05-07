@@ -46,11 +46,6 @@ namespace Vistas
             this.Close();
         }
 
-        private void FrmAgregarInquilino_Load(object sender, EventArgs e)
-        {
-
-        }
-
         
     }
 }
