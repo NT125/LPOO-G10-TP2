@@ -29,6 +29,16 @@
         private void InitializeComponent()
         {
             this.groupABM = new System.Windows.Forms.GroupBox();
+            this.txtNombreBuscado = new System.Windows.Forms.TextBox();
+            this.lblUpdate = new System.Windows.Forms.Label();
+            this.txtPasswd = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtApeNom = new System.Windows.Forms.TextBox();
+            this.cmbRoles = new System.Windows.Forms.ComboBox();
+            this.lblPasswd = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.lblApNom = new System.Windows.Forms.Label();
+            this.lblRol = new System.Windows.Forms.Label();
             this.btnDeleteUsr = new System.Windows.Forms.Button();
             this.btnModifyUsr = new System.Windows.Forms.Button();
             this.btnAddUsr = new System.Windows.Forms.Button();
@@ -37,16 +47,7 @@
             this.btnShowUsr = new System.Windows.Forms.Button();
             this.btnSearchUsr = new System.Windows.Forms.Button();
             this.dgvUsers = new System.Windows.Forms.DataGridView();
-            this.lblRol = new System.Windows.Forms.Label();
-            this.lblApNom = new System.Windows.Forms.Label();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.lblPasswd = new System.Windows.Forms.Label();
-            this.cmbRoles = new System.Windows.Forms.ComboBox();
-            this.txtApeNom = new System.Windows.Forms.TextBox();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtPasswd = new System.Windows.Forms.TextBox();
-            this.lblUpdate = new System.Windows.Forms.Label();
-            this.txtNombreBuscado = new System.Windows.Forms.TextBox();
+            this.btnClose = new System.Windows.Forms.Button();
             this.groupABM.SuspendLayout();
             this.groupQuery.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
@@ -73,6 +74,87 @@
             this.groupABM.TabIndex = 0;
             this.groupABM.TabStop = false;
             this.groupABM.Text = "ABM";
+            // 
+            // txtNombreBuscado
+            // 
+            this.txtNombreBuscado.Location = new System.Drawing.Point(27, 145);
+            this.txtNombreBuscado.Name = "txtNombreBuscado";
+            this.txtNombreBuscado.Size = new System.Drawing.Size(228, 20);
+            this.txtNombreBuscado.TabIndex = 12;
+            // 
+            // lblUpdate
+            // 
+            this.lblUpdate.AutoSize = true;
+            this.lblUpdate.Location = new System.Drawing.Point(24, 129);
+            this.lblUpdate.Name = "lblUpdate";
+            this.lblUpdate.Size = new System.Drawing.Size(179, 13);
+            this.lblUpdate.TabIndex = 11;
+            this.lblUpdate.Text = "Nombre a Actualizar (Sólo UPDATE)";
+            // 
+            // txtPasswd
+            // 
+            this.txtPasswd.Location = new System.Drawing.Point(119, 100);
+            this.txtPasswd.Name = "txtPasswd";
+            this.txtPasswd.Size = new System.Drawing.Size(133, 20);
+            this.txtPasswd.TabIndex = 10;
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Location = new System.Drawing.Point(119, 74);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(133, 20);
+            this.txtUsuario.TabIndex = 9;
+            // 
+            // txtApeNom
+            // 
+            this.txtApeNom.Location = new System.Drawing.Point(119, 48);
+            this.txtApeNom.Name = "txtApeNom";
+            this.txtApeNom.Size = new System.Drawing.Size(133, 20);
+            this.txtApeNom.TabIndex = 8;
+            // 
+            // cmbRoles
+            // 
+            this.cmbRoles.FormattingEnabled = true;
+            this.cmbRoles.Location = new System.Drawing.Point(119, 21);
+            this.cmbRoles.Name = "cmbRoles";
+            this.cmbRoles.Size = new System.Drawing.Size(133, 21);
+            this.cmbRoles.TabIndex = 7;
+            // 
+            // lblPasswd
+            // 
+            this.lblPasswd.AutoSize = true;
+            this.lblPasswd.Location = new System.Drawing.Point(22, 103);
+            this.lblPasswd.Name = "lblPasswd";
+            this.lblPasswd.Size = new System.Drawing.Size(61, 13);
+            this.lblPasswd.TabIndex = 6;
+            this.lblPasswd.Text = "Contraseña";
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Location = new System.Drawing.Point(22, 77);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(43, 13);
+            this.lblUsuario.TabIndex = 5;
+            this.lblUsuario.Text = "Usuario";
+            // 
+            // lblApNom
+            // 
+            this.lblApNom.AutoSize = true;
+            this.lblApNom.Location = new System.Drawing.Point(22, 51);
+            this.lblApNom.Name = "lblApNom";
+            this.lblApNom.Size = new System.Drawing.Size(92, 13);
+            this.lblApNom.TabIndex = 4;
+            this.lblApNom.Text = "Apellido y Nombre";
+            // 
+            // lblRol
+            // 
+            this.lblRol.AutoSize = true;
+            this.lblRol.Location = new System.Drawing.Point(22, 24);
+            this.lblRol.Name = "lblRol";
+            this.lblRol.Size = new System.Drawing.Size(23, 13);
+            this.lblRol.TabIndex = 3;
+            this.lblRol.Text = "Rol";
             // 
             // btnDeleteUsr
             // 
@@ -155,92 +237,22 @@
             this.dgvUsers.TabIndex = 2;
             this.dgvUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // lblRol
+            // btnClose
             // 
-            this.lblRol.AutoSize = true;
-            this.lblRol.Location = new System.Drawing.Point(22, 24);
-            this.lblRol.Name = "lblRol";
-            this.lblRol.Size = new System.Drawing.Size(23, 13);
-            this.lblRol.TabIndex = 3;
-            this.lblRol.Text = "Rol";
-            // 
-            // lblApNom
-            // 
-            this.lblApNom.AutoSize = true;
-            this.lblApNom.Location = new System.Drawing.Point(22, 51);
-            this.lblApNom.Name = "lblApNom";
-            this.lblApNom.Size = new System.Drawing.Size(92, 13);
-            this.lblApNom.TabIndex = 4;
-            this.lblApNom.Text = "Apellido y Nombre";
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(22, 77);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(43, 13);
-            this.lblUsuario.TabIndex = 5;
-            this.lblUsuario.Text = "Usuario";
-            // 
-            // lblPasswd
-            // 
-            this.lblPasswd.AutoSize = true;
-            this.lblPasswd.Location = new System.Drawing.Point(22, 103);
-            this.lblPasswd.Name = "lblPasswd";
-            this.lblPasswd.Size = new System.Drawing.Size(61, 13);
-            this.lblPasswd.TabIndex = 6;
-            this.lblPasswd.Text = "Contraseña";
-            // 
-            // cmbRoles
-            // 
-            this.cmbRoles.FormattingEnabled = true;
-            this.cmbRoles.Location = new System.Drawing.Point(119, 21);
-            this.cmbRoles.Name = "cmbRoles";
-            this.cmbRoles.Size = new System.Drawing.Size(133, 21);
-            this.cmbRoles.TabIndex = 7;
-            // 
-            // txtApeNom
-            // 
-            this.txtApeNom.Location = new System.Drawing.Point(119, 48);
-            this.txtApeNom.Name = "txtApeNom";
-            this.txtApeNom.Size = new System.Drawing.Size(133, 20);
-            this.txtApeNom.TabIndex = 8;
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Location = new System.Drawing.Point(119, 74);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(133, 20);
-            this.txtUsuario.TabIndex = 9;
-            // 
-            // txtPasswd
-            // 
-            this.txtPasswd.Location = new System.Drawing.Point(119, 100);
-            this.txtPasswd.Name = "txtPasswd";
-            this.txtPasswd.Size = new System.Drawing.Size(133, 20);
-            this.txtPasswd.TabIndex = 10;
-            // 
-            // lblUpdate
-            // 
-            this.lblUpdate.AutoSize = true;
-            this.lblUpdate.Location = new System.Drawing.Point(24, 129);
-            this.lblUpdate.Name = "lblUpdate";
-            this.lblUpdate.Size = new System.Drawing.Size(179, 13);
-            this.lblUpdate.TabIndex = 11;
-            this.lblUpdate.Text = "Nombre a Actualizar (Sólo UPDATE)";
-            // 
-            // txtNombreBuscado
-            // 
-            this.txtNombreBuscado.Location = new System.Drawing.Point(27, 145);
-            this.txtNombreBuscado.Name = "txtNombreBuscado";
-            this.txtNombreBuscado.Size = new System.Drawing.Size(228, 20);
-            this.txtNombreBuscado.TabIndex = 12;
+            this.btnClose.Location = new System.Drawing.Point(786, 320);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.TabIndex = 3;
+            this.btnClose.Text = "Salir";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // FormUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(878, 355);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.dgvUsers);
             this.Controls.Add(this.groupQuery);
             this.Controls.Add(this.groupABM);
@@ -277,5 +289,6 @@
         private System.Windows.Forms.Label lblRol;
         private System.Windows.Forms.TextBox txtNombreBuscado;
         private System.Windows.Forms.Label lblUpdate;
+        private System.Windows.Forms.Button btnClose;
     }
 }
