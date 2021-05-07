@@ -81,5 +81,12 @@ namespace Vistas
             }
 
         }
+
+        private void mostrarAlquileresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAlquileres oFormAlquileres = new FormAlquileres();
+
+            oFormAlquileres.Show();
+        }
     }
 }

@@ -108,6 +108,7 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.agenciaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
+            cmd.Parameters.AddWithValue("@pattern", "%" + cadena + "%");
             cmd.CommandText = "UPDATE Usuario SET Usu_ApellidoNombre = '"+ nombreapellido +"', ";
             cmd.CommandText += "Usu_NombreUsuario = '" + usuario + "', ";
             cmd.CommandText += "Usu_Contraseña = '" + contraseña + "', WHERE Usu_ApellidoNombre LIKE @pattern";
@@ -115,7 +116,6 @@ namespace ClasesBase
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
 
-            cmd.Parameters.AddWithValue("@pattern", "%" + cadena + "%");
 
             SqlDataAdapter dAdapter = new SqlDataAdapter(cmd);
 

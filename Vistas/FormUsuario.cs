@@ -148,7 +148,7 @@ namespace Vistas
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+             this.Close();
         }
     }
 }
