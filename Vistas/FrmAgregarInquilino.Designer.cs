@@ -79,7 +79,6 @@
             this.label9.Size = new System.Drawing.Size(149, 13);
             this.label9.TabIndex = 16;
             this.label9.Text = "Ingrese los datos del Inquilino:";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // button1
             // 
