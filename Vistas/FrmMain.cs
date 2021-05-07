@@ -24,6 +24,12 @@ namespace Vistas
 
         }
 
+        private void agregarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormUsuario oFrmUsuario = new FormUsuario();
+            oFrmUsuario.Show();
+        }
+
         private void añadirEdificioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmAgregarEdificio oFrmAgregarEdificio = new FrmAgregarEdificio();
@@ -62,6 +68,17 @@ namespace Vistas
 
         private void FrmMain_Load_1(object sender, EventArgs e)
         {
+
+        }
+
+        private void salirDelSistemaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var confirmResult = MessageBox.Show("¿Desea salir del Sistema?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (confirmResult == DialogResult.Yes)
+            {
+                this.Close();
+            }
 
         }
     }
