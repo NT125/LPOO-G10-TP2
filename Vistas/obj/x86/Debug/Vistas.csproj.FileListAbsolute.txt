@@ -32,3 +32,22 @@ C:\Users\admin\Downloads\LPOO1_G10-master (1)\LPOO1_G10-master\Vistas\obj\x86\De
 C:\Users\admin\Downloads\LPOO1_G10-master (1)\LPOO1_G10-master\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
 C:\Users\admin\Downloads\LPOO1_G10-master (1)\LPOO1_G10-master\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
 C:\Users\admin\Downloads\LPOO1_G10-master (1)\LPOO1_G10-master\Vistas\bin\Debug\Vistas.exe.config
+Z:\ides\ProyectoPuntonetgitOfficial\LPOO-G10-TP2\Vistas\bin\Debug\Vistas.exe.config
+Z:\ides\ProyectoPuntonetgitOfficial\LPOO-G10-TP2\Vistas\obj\x86\Debug\Vistas.exe
+Z:\ides\ProyectoPuntonetgitOfficial\LPOO-G10-TP2\Vistas\obj\x86\Debug\Vistas.pdb
+Z:\ides\ProyectoPuntonetgitOfficial\LPOO-G10-TP2\Vistas\bin\Debug\Vistas.exe
+Z:\ides\ProyectoPuntonetgitOfficial\LPOO-G10-TP2\Vistas\bin\Debug\Vistas.pdb
+Z:\ides\ProyectoPuntonetgitOfficial\LPOO-G10-TP2\Vistas\bin\Debug\ClasesBase.dll
+Z:\ides\ProyectoPuntonetgitOfficial\LPOO-G10-TP2\Vistas\bin\Debug\LPOO1_GRUPO10.exe
+Z:\ides\ProyectoPuntonetgitOfficial\LPOO-G10-TP2\Vistas\bin\Debug\ClasesBase.pdb
+Z:\ides\ProyectoPuntonetgitOfficial\LPOO-G10-TP2\Vistas\bin\Debug\LPOO1_GRUPO10.pdb
+Z:\ides\ProyectoPuntonetgitOfficial\LPOO-G10-TP2\Vistas\obj\x86\Debug\ResolveAssemblyReference.cache
+Z:\ides\ProyectoPuntonetgitOfficial\LPOO-G10-TP2\Vistas\obj\x86\Debug\Vistas.FrmAgregarDepartamento.resources
+Z:\ides\ProyectoPuntonetgitOfficial\LPOO-G10-TP2\Vistas\obj\x86\Debug\Vistas.FrmAgregarEdificio.resources
+Z:\ides\ProyectoPuntonetgitOfficial\LPOO-G10-TP2\Vistas\obj\x86\Debug\Vistas.FrmAgregarInquilino.resources
+Z:\ides\ProyectoPuntonetgitOfficial\LPOO-G10-TP2\Vistas\obj\x86\Debug\Vistas.FrmLogin.resources
+Z:\ides\ProyectoPuntonetgitOfficial\LPOO-G10-TP2\Vistas\obj\x86\Debug\Vistas.FrmMain.resources
+Z:\ides\ProyectoPuntonetgitOfficial\LPOO-G10-TP2\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
+Z:\ides\ProyectoPuntonetgitOfficial\LPOO-G10-TP2\Vistas\obj\x86\Debug\GenerateResource.read.1.tlog
+Z:\ides\ProyectoPuntonetgitOfficial\LPOO-G10-TP2\Vistas\obj\x86\Debug\GenerateResource.write.1.tlog
+Z:\ides\ProyectoPuntonetgitOfficial\LPOO-G10-TP2\Vistas\obj\x86\Debug\Vistas.FormAlquileres.resources

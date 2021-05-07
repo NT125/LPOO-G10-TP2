@@ -51,6 +51,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>agenciaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FormAlquileres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAlquileres.Designer.cs">
+      <DependentUpon>FormAlquileres.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmAgregarDepartamento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAlquileres.resx">
+      <DependentUpon>FormAlquileres.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmAgregarDepartamento.resx">
       <DependentUpon>FrmAgregarDepartamento.cs</DependentUpon>
     </EmbeddedResource>

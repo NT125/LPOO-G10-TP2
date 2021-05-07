@@ -55,14 +55,22 @@ namespace Vistas
             oFrmAgregarDepartamento.Show();
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void listarAlquileresToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            FormAlquileres oFormAlquileres = new FormAlquileres();
+            oFormAlquileres.Show();
+        }
 
+        private void alquilerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
         }
 
         private void FrmMain_Load_1(object sender, EventArgs e)
         {
 
         }
+
+      
     }
 }
