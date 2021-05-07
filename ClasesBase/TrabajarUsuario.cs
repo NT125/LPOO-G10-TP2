@@ -122,6 +122,7 @@ namespace ClasesBase
             DataTable dTable = new DataTable();
 
             return dTable;
+
         }
 
         public static DataTable borrarUsuario(string cadena)
