@@ -32,3 +32,20 @@ C:\Users\admin\Downloads\LPOO1_G10-master (1)\LPOO1_G10-master\Vistas\obj\x86\De
 C:\Users\admin\Downloads\LPOO1_G10-master (1)\LPOO1_G10-master\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
 C:\Users\admin\Downloads\LPOO1_G10-master (1)\LPOO1_G10-master\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
 C:\Users\admin\Downloads\LPOO1_G10-master (1)\LPOO1_G10-master\Vistas\bin\Debug\Vistas.exe.config
+C:\Users\Vanina\Documents\GitHub\LPOO-G10-TP2\Vistas\bin\Debug\Vistas.exe.config
+C:\Users\Vanina\Documents\GitHub\LPOO-G10-TP2\Vistas\obj\x86\Debug\Vistas.exe
+C:\Users\Vanina\Documents\GitHub\LPOO-G10-TP2\Vistas\obj\x86\Debug\Vistas.pdb
+C:\Users\Vanina\Documents\GitHub\LPOO-G10-TP2\Vistas\bin\Debug\Vistas.exe
+C:\Users\Vanina\Documents\GitHub\LPOO-G10-TP2\Vistas\bin\Debug\Vistas.pdb
+C:\Users\Vanina\Documents\GitHub\LPOO-G10-TP2\Vistas\bin\Debug\ClasesBase.dll
+C:\Users\Vanina\Documents\GitHub\LPOO-G10-TP2\Vistas\bin\Debug\LPOO1_GRUPO10.exe
+C:\Users\Vanina\Documents\GitHub\LPOO-G10-TP2\Vistas\bin\Debug\ClasesBase.pdb
+C:\Users\Vanina\Documents\GitHub\LPOO-G10-TP2\Vistas\bin\Debug\LPOO1_GRUPO10.pdb
+C:\Users\Vanina\Documents\GitHub\LPOO-G10-TP2\Vistas\obj\x86\Debug\Vistas.csprojResolveAssemblyReference.cache
+C:\Users\Vanina\Documents\GitHub\LPOO-G10-TP2\Vistas\obj\x86\Debug\Vistas.FrmAgregarDepartamento.resources
+C:\Users\Vanina\Documents\GitHub\LPOO-G10-TP2\Vistas\obj\x86\Debug\Vistas.FrmAgregarEdificio.resources
+C:\Users\Vanina\Documents\GitHub\LPOO-G10-TP2\Vistas\obj\x86\Debug\Vistas.FrmAgregarInquilino.resources
+C:\Users\Vanina\Documents\GitHub\LPOO-G10-TP2\Vistas\obj\x86\Debug\Vistas.FrmLogin.resources
+C:\Users\Vanina\Documents\GitHub\LPOO-G10-TP2\Vistas\obj\x86\Debug\Vistas.FrmMain.resources
+C:\Users\Vanina\Documents\GitHub\LPOO-G10-TP2\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
+C:\Users\Vanina\Documents\GitHub\LPOO-G10-TP2\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
