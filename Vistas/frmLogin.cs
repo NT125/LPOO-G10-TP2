@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 
 using ClasesBase;
+using System.Data.SqlClient;
 
 namespace Vistas
 {
@@ -20,36 +21,57 @@ namespace Vistas
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            Boolean bUserFound = false;
+            int rolObtenido = TrabajarUsuario.login(txtUserName.Text,txtPassword.Text);
 
-            Usuario oUsuario1 = new Usuario("Admin","123");
-            Usuario oUsuario2 = new Usuario("Operador", "123");
-            Usuario oUsuario3 = new Usuario("Auditor", "123");
-
-
-            FrmMain oFrmMain = new FrmMain();
-
-            if (oUsuario1.UsuNombreUsuario == txtUserName.Text && oUsuario1.UsuContrasenia == txtPassword.Text)
+            if (rolObtenido > 0)
             {
-                bUserFound = true;
-            }
-            else if (oUsuario2.UsuNombreUsuario == txtUserName.Text && oUsuario2.UsuContrasenia == txtPassword.Text)
-            {
-                bUserFound = true;
-            }
+                FrmMain oFrmMain = new FrmMain();
 
-            if (bUserFound)
-            {
-                MessageBox.Show("Bienvenido/a: " + txtUserName.Text,"Datos correctos",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
-                
-                oFrmMain.perfil = "administrador";
-                oFrmMain.Show();               
-            }
+                switch (rolObtenido)
+                {
+                    case 1: oFrmMain.perfil = "ADMINISTRADOR"; break;
+                    case 2: oFrmMain.perfil = "OPERADOR"; break;
+                    case 3: oFrmMain.perfil = "AUDITOR"; break;
+                }
 
+                MessageBox.Show("Ha ingresado al sistema como: " + oFrmMain.perfil, "Datos de acceso correctos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                oFrmMain.Show();
+                this.Controls.Clear();
+                this.InitializeComponent();
+            }
             else
             {
-                MessageBox.Show("El usuario ingresado no existe", "Datos incorrectos",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Usuario y/o contraseña incorrectos", "Datos de acceso erróneos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+                
+
+            //Boolean bUserFound = false;
+
+            //Usuario oUsuario1 = new Usuario("Admin","123");
+            //Usuario oUsuario2 = new Usuario("Operador", "123");
+            //Usuario oUsuario3 = new Usuario("Auditor", "123");
+
+
+            //FrmMain oFrmMain = new FrmMain();
+
+            //if (oUsuario1.UsuNombreUsuario == txtUserName.Text && oUsuario1.UsuContrasenia == txtPassword.Text)
+            //{
+            //    bUserFound = true;
+            //}
+            //else if (oUsuario2.UsuNombreUsuario == txtUserName.Text && oUsuario2.UsuContrasenia == txtPassword.Text)
+            //{
+            //    bUserFound = true;
+            //}
+
+            //if (bUserFound)
+            //{
+            //    MessageBox.Show("Bienvenido: " + txtUserName.Text, "Datos de acceso correctos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    oFrmMain.Show();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Usuario y/o contraseña inválidos", "Datos de acceso incorrectos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
 
 
         }
@@ -92,5 +114,20 @@ namespace Vistas
         {
 
         }
+
+        //public static bool login(string usuario, string contraseña)
+        //{
+        //    SqlConnection cnn = new SqlConnection(Vistas.Properties.Settings.Default.agenciaConnectionString);
+
+        //    const string sqlAction = "SELECT Rol_Codigo FROM Usuario WHERE Usu_NombreUsuario = @user AND Usu_Contraseña = @passwd";
+        //    SqlCommand cmd = new SqlCommand(sqlAction, cnn);
+
+        //    cmd.Parameters.AddWithValue("user", usuario);
+        //    cmd.Parameters.AddWithValue("passwd", contraseña);
+
+
+
+        //    return false;
+        //}
     }
 }

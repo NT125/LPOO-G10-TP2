@@ -20,8 +20,17 @@ namespace Vistas
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Perfil:: " + perfil);         
-
+            if (this.perfil == "ADMINISTRADOR")
+            {
+                inquilinosToolStripMenuItem.Enabled = false;
+                alquilerToolStripMenuItem.Enabled = false;
+            }
+            if (this.perfil == "OPERADOR")
+            {
+                sistemaToolStripMenuItem.Enabled = false;
+                edificiosToolStripMenuItem.Enabled = false;
+                departamentosToolStripMenuItem.Enabled = false;
+            }
         }
 
         private void agregarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
@@ -61,11 +70,6 @@ namespace Vistas
             oFrmAgregarDepartamento.Show();
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
         private void FrmMain_Load_1(object sender, EventArgs e)
         {
 
@@ -88,5 +92,14 @@ namespace Vistas
 
             oFormAlquileres.Show();
         }
+        
+        /*
+        private void aBMAlquilersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmAgregarAlquiler oFrmAgregarAlquiler = new FrmAgregarAlquiler();
+
+            oFrmAgregarAlquiler.Show();
+        }
+        */
     }
 }

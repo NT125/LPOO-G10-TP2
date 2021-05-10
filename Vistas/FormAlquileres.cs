@@ -24,7 +24,12 @@ namespace Vistas
 
         private void btnConsultaAlquiler_Click(object sender, EventArgs e)
         {
-            dataGridViewAlquileres.DataSource = TrabajarAlquiler.ListarAlquileres();
+            dataGridViewAlquileres.DataSource = TrabajarAlquiler.listarAlquileres();
+        }
+
+        private void btnBuscarAlq_Click(object sender, EventArgs e)
+        {
+            dataGridViewAlquileres.DataSource = TrabajarAlquiler.buscarAlquiler(txtBuscarAlq.Text);
         }
     }
 }

@@ -54,7 +54,5 @@ namespace ClasesBase
         public Usuario()
         { }
 
-       
-
     }
 }

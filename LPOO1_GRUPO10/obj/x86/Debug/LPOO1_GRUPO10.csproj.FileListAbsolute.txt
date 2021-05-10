@@ -6,3 +6,9 @@ C:\Users\admin\Documents\Visual Studio 2010\Projects\LPOO1_GRUPO10\LPOO1_GRUPO10
 C:\Users\admin\Documents\Visual Studio 2010\Projects\LPOO1_GRUPO10\LPOO1_GRUPO10\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\admin\Documents\Visual Studio 2010\Projects\LPOO1_GRUPO10\LPOO1_GRUPO10\obj\x86\Debug\LPOO1_GRUPO10.exe
 C:\Users\admin\Documents\Visual Studio 2010\Projects\LPOO1_GRUPO10\LPOO1_GRUPO10\obj\x86\Debug\LPOO1_GRUPO10.pdb
+C:\Users\admin\Downloads\LPOO1_G10-master (1)\LPOO1_G10-master\LPOO1_GRUPO10\bin\Debug\LPOO1_GRUPO10.exe
+C:\Users\admin\Downloads\LPOO1_G10-master (1)\LPOO1_G10-master\LPOO1_GRUPO10\bin\Debug\LPOO1_GRUPO10.pdb
+C:\Users\admin\Downloads\LPOO1_G10-master (1)\LPOO1_G10-master\LPOO1_GRUPO10\obj\x86\Debug\LPOO1_GRUPO10.Properties.Resources.resources
+C:\Users\admin\Downloads\LPOO1_G10-master (1)\LPOO1_G10-master\LPOO1_GRUPO10\obj\x86\Debug\LPOO1_GRUPO10.csproj.GenerateResource.Cache
+C:\Users\admin\Downloads\LPOO1_G10-master (1)\LPOO1_G10-master\LPOO1_GRUPO10\obj\x86\Debug\LPOO1_GRUPO10.exe
+C:\Users\admin\Downloads\LPOO1_G10-master (1)\LPOO1_G10-master\LPOO1_GRUPO10\obj\x86\Debug\LPOO1_GRUPO10.pdb

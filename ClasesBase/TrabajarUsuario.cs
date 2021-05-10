@@ -5,10 +5,48 @@ using System.Text;
 using System.Data;
 using System.Data.SqlClient;
 
+
 namespace ClasesBase
 {
     public class TrabajarUsuario
     {
+        public static int login(string user, string passwd)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.agenciaConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT Rol_Codigo FROM Usuario WHERE Usu_NombreUsuario = @user AND Usu_Contraseña = @passwd";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("user", user);
+            cmd.Parameters.AddWithValue("passwd", passwd);
+
+            SqlDataAdapter dAdapter = new SqlDataAdapter(cmd);
+
+            DataTable dTable = new DataTable();
+            dAdapter.Fill(dTable);
+
+            int rolObtenido = 0;
+
+            if (dTable.Rows.Count == 1)
+            {
+                switch (dTable.Rows[0][0].ToString())
+                {
+                    case "1": rolObtenido = 1; break;
+                    case "2": rolObtenido = 2; break;
+                    case "3": rolObtenido = 3; break;
+                }
+
+                if(dTable.Rows[0][0].ToString()=="0")
+                {
+                    rolObtenido = 1;
+                }
+            }
+
+            return rolObtenido;
+        }
+         
         public static DataTable listarRoles()
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.agenciaConnectionString);
@@ -86,7 +124,7 @@ namespace ClasesBase
             cmd.CommandText += " FROM Usuario as U";
             cmd.CommandText += " LEFT JOIN Rol as R ON (R.Rol_Codigo=U.Rol_Codigo)";
             cmd.CommandText += " WHERE";
-            cmd.CommandText += " Usu_NombreUsuario LIKE @pattern ";
+            cmd.CommandText += " U.Usu_NombreUsuario LIKE @pattern ";
 
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
@@ -103,15 +141,21 @@ namespace ClasesBase
             return dTable;
         }
 
-        public static DataTable actualizarUsuario(string usuario, string contraseña, string nombreapellido, string cadena)
+        public static DataTable actualizarUsuario(string rol, string usuario, string contraseña, string nombreapellido, string cadena)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.agenciaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "UPDATE Usuario SET Rol_Codigo = @rol, Usu_ApellidoNombre = @nomape, ";
+            cmd.CommandText += "Usu_NombreUsuario = @usu, ";
+            cmd.CommandText += "Usu_Contraseña = @pwd WHERE Usu_ID LIKE @pattern";
+
+            //estableciendo los valores
+            cmd.Parameters.AddWithValue("@rol", "%" + rol + "%");
+            cmd.Parameters.AddWithValue("@usu", "%" + usuario + "%");
+            cmd.Parameters.AddWithValue("@pwd", "%" + contraseña + "%");
+            cmd.Parameters.AddWithValue("@nomape", "%" + nombreapellido + "%");
             cmd.Parameters.AddWithValue("@pattern", "%" + cadena + "%");
-            cmd.CommandText = "UPDATE Usuario SET Usu_ApellidoNombre = '"+ nombreapellido +"', ";
-            cmd.CommandText += "Usu_NombreUsuario = '" + usuario + "', ";
-            cmd.CommandText += "Usu_Contraseña = '" + contraseña + "', WHERE Usu_ApellidoNombre LIKE @pattern";
             
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;

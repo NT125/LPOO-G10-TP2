@@ -1,0 +1,5 @@
+C:\Users\admin\Downloads\LPOO1_G10-master (1)\LPOO1_G10-master\ClasesBase\bin\Release\ClasesBase.dll.config
+C:\Users\admin\Downloads\LPOO1_G10-master (1)\LPOO1_G10-master\ClasesBase\bin\Release\ClasesBase.dll
+C:\Users\admin\Downloads\LPOO1_G10-master (1)\LPOO1_G10-master\ClasesBase\bin\Release\ClasesBase.pdb
+C:\Users\admin\Downloads\LPOO1_G10-master (1)\LPOO1_G10-master\ClasesBase\obj\Release\ClasesBase.dll
+C:\Users\admin\Downloads\LPOO1_G10-master (1)\LPOO1_G10-master\ClasesBase\obj\Release\ClasesBase.pdb

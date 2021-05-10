@@ -18,9 +18,6 @@ namespace Vistas
             InitializeComponent();
         }
 
-        /*
-        SqlConnection conexion = new SqlConnection("");
-        */
 
         private void FormUsuario_Load(object sender, EventArgs e)
         {
@@ -43,18 +40,25 @@ namespace Vistas
         }
         ///////////////////////
 
-        // OPERACIONES DEL ABM/CONSULTAS//
+        // ABM-CONSULTAS
         private void btnModifyUsr_Click(object sender, EventArgs e)
-        {               
-            dgvUsers.DataSource = TrabajarUsuario.actualizarUsuario(txtUsuario.Text, txtPasswd.Text, txtApeNom.Text, txtNombreBuscado.Text);
-            MessageBox.Show("Los datos han sido actualizados con éxito", "Usuario Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+        {
+            if (txtApeNom.Text != "" || txtPasswd.Text != "" || txtUsuario.Text != "")
+            {                
+                dgvUsers.DataSource = TrabajarUsuario.actualizarUsuario(cmbRoles.Text, txtUsuario.Text, txtPasswd.Text, txtApeNom.Text, txtNombreBuscado.Text);
+                MessageBox.Show("Los datos han sido actualizados con éxito", "Usuario Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
-            //Reiniciando los campos
-            txtApeNom.Text = "";
-            txtUsuario.Text = "";
-            txtPasswd.Text = "";
+                //Reiniciando los campos
+                txtApeNom.Text = "";
+                txtUsuario.Text = "";
+                txtPasswd.Text = "";
 
-            cargarUsuarios();
+                cargarUsuarios();
+            }
+            else
+            {
+                MessageBox.Show("Por favor, complete todos los campos", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnAddUsr_Click(object sender, EventArgs e)
@@ -131,24 +135,40 @@ namespace Vistas
 
         private void dgvUsers_CurrentCellChanged(object sender, EventArgs e)
         {
-            if (dgvUsers.CurrentRow != null)
-            {
-                cmbRoles.SelectedValue = dgvUsers.CurrentRow.Cells["Rol_Codigo"].Value.ToString();
-                txtApeNom.Text = dgvUsers.CurrentRow.Cells["Usu_ApellidoNombre"].Value.ToString();
-                txtUsuario.Text = dgvUsers.CurrentRow.Cells["Usu_NombreUsuario"].Value.ToString();
-                txtPasswd.Text = dgvUsers.CurrentRow.Cells["Usu_Contraseña"].Value.ToString();
-            }
+           
         }
 
 
-        //no se porque pero si borro el método el programa no arranca
+        /////////no se porque pero si borro el método el programa no arranca
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
         }
+        ////////
+
 
         private void btnClose_Click(object sender, EventArgs e)
         {
              this.Close();
+        }
+
+        private void dgvUsers_CurrentCellChanged_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgvUsers.CurrentRow != null)
+                {
+                    cmbRoles.SelectedValue = dgvUsers.CurrentRow.Cells["Rol_Codigo"].Value.ToString();
+                    //no toma la tabla Usuario (pq?), cargando según número de columna
+                    txtApeNom.Text = dgvUsers.CurrentRow.Cells[1].Value.ToString();
+                    txtUsuario.Text = dgvUsers.CurrentRow.Cells[2].Value.ToString();
+                    txtPasswd.Text = dgvUsers.CurrentRow.Cells[3].Value.ToString();
+                }                
+            }
+            catch (Exception ex)
+            {
+
+            }
+
         }
     }
 }

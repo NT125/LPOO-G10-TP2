@@ -87,9 +87,9 @@
             this.lblUpdate.AutoSize = true;
             this.lblUpdate.Location = new System.Drawing.Point(24, 129);
             this.lblUpdate.Name = "lblUpdate";
-            this.lblUpdate.Size = new System.Drawing.Size(179, 13);
+            this.lblUpdate.Size = new System.Drawing.Size(148, 13);
             this.lblUpdate.TabIndex = 11;
-            this.lblUpdate.Text = "Nombre a Actualizar (Sólo UPDATE)";
+            this.lblUpdate.Text = "Actualizar usuario (Ingrese ID)";
             // 
             // txtPasswd
             // 
@@ -236,6 +236,7 @@
             this.dgvUsers.Size = new System.Drawing.Size(532, 282);
             this.dgvUsers.TabIndex = 2;
             this.dgvUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgvUsers.CurrentCellChanged += new System.EventHandler(this.dgvUsers_CurrentCellChanged_1);
             // 
             // btnClose
             // 
